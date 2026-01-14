@@ -173,7 +173,7 @@ In DPS processes, the "pocket formula" can be more specifically written with the
 % Disagreement in $\effXsecDPS$ obtained in different methods has been interpreted as from the difference in the dominant parton species probed through such processes \cite{MPI_LHC}, yet in some cases it could also be explained by inadequate SPS component subtraction.
 % Such results calls for independent probes into the proton structure, for instance, triple parton scattering (TPS) processes.
 
-\subsection{Triple Parton Scattering (TPS) Processes}
+\subsection{Triple Parton Scattering}
 
 TPS processes in high-energy proton-proton collisions have drawn much attention both in theory and experiments.
 In a theoretical work by D.
@@ -200,103 +200,7 @@ These quarkonia final states have relatively higher cross-sections when compared
 It is worth mentioning that, despite a potentially lower yield, the $pp\to J/\psi+J/\psi+\Upsilon+X$ process is included in this analysis, since this process with a 6$\mu$ final state can be more cleanly reconstructed on the CMS detector than the rest of the processes, thanks to the excellent muon identification and measurement capability of the CMS detector.
 A general introduction is given in the next section.
 
-\subsection{The Large Hadron Collider (LHC)}
-
-The Large Hadron Collider (LHC) operated by the European Organization of Nuclear Research (CERN) is the most powerful accelerator on earth today.
-The LHC collides beams of protons with an energy of up to 6.8 TeV, corresponding to a center-of-mass energies of up to $\sqrt{s}=13.6~\mathrm{TeV}$.
-Located approximately 100 meters underground across the Swiss-Franco border near Geneva, the LHC features a main storage ring with a circumference of approximately 27 kilometers, capable of accelerating more than 2800 proton bunches simultaneously, each bunch containing approximately $10^11$ protons.
-Protons accelerated in the LHC traverse through the storage ring in opposite directions and intersect at four interaction points to collide at a time interval of 25 nanoseconds and deliver an instantaneous luminosity up to $2.5\times 10^{34} ~\text{cm}^{-2}\cdot\text{s}^{-1}$\cite{CMS:LUMI-PUB}.
-
-Four major particle detectors, CMS, ATLAS, ALICE and LHCb, are each located at one of the four interaction points, measuring the key properties of particles produced in collision with their unique detector modules, and acquire data for further physics analysis.
-
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=1.0\linewidth]{images/CMS_pileup_allYears_run3.png}
-    \caption{Average number of interactions per bunch crossing in LHC Run 3 by year\cite{CMS:LUMI-PUB}}
-    \label{fig:CMS_pileup}
-\end{figure}
-
-One important consequence of the high luminosity is the "pileup" effect, i.e., in each bunch crossing more than one hard scattering event happens.
-In LHC Run 3, the average number of interactions in each bunch crossing reaches 60, as shown by Figure \ref{fig:CMS_pileup}.
-\cite{CMS:LUMI-PUB} Such effect may introduce a higher combinatorial background in the analysis and require advanced analysis techniques to mitigate its effect.
-
-\subsection{The CMS Detector}
-
-The Compact Muon Solenoid (CMS) (shown in Figure \ref{fig:CMS-disection}) is one of the two general-purpose detectors on LHC.
-The detector itself measures 21 meters long and 15 meters in diameter, with a total weight of approximately 14,000 tonnes.
-
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=1.0\linewidth]{images/CMS_disection_Run2.png}
-    \caption{A schematic dissection of the CMS detector\cite{CMS_CUTAWAY_DIAGRAM}}
-    \label{fig:CMS-disection}
-\end{figure}
-
-A defining characteristic of CMS is its powerful superconducting solenoid magnet with a inner bore of 5.9 meters and a length of 12.9 meters, capable of producing a magnetic field of 3.8 T inside its bore with a direction along the beam line, where the inner tracker and calorimeter modules are accommodated.
-The strong-magnetic-field design is in line with the demand for good momentum resolution within a relatively compact spectrometer.\cite{CMS_JINST_2008}
-
-Another distinctive advantage of CMS is its muon measurement capability, owing to its muon sub-detector module designs.
-With the return field of the superconducting solenoid strong enough to saturate 1.5 m of iron, the 4 muon "stations" are integrated inside the iron return yoke of the solenoid, providing a bending field of around 2 T and ensuring both robustness and full geometrical coverage.
-Each muon "station" consists of several layers of aluminium drift tubes (DT) in the barrel region and and cathode strip chambers (CSCs) in the endcap region, complemented by resistive plate chambers (RPCs).
-These detector modules work in tandem with the inner silicon tracker modules to produce a total reconstruction and identificaton efficiency of $> ~ 96\%$ and relative momentum resolution of $2\%$ for most muons and $10\%$ even for TeV muons.\cite{CMS_MUON_PERF_13TEV}
-
-\section{Datasets and Event Selection}
-
-\subsection{The CMS Trigger System and Criteria}
-
-LHC collisions occur at a rate of 40 MHz, which corresponds to a data production rate of around 40 TB/s, making it impossible to store all events.
-The CMS experiment therfore employs a a two-tiered trigger system to preserve only events of physical importance.
-A hardware-based Level 1 Trigger (L1T), run on FPGAs and ASICs, reduces the event rate to 100 kHz.
-A software-based High Level Trigger (HLT), run on computer farms further reduces the average output rate to around 1.5 kHz.
-
-The CMS datasets typically accept events passing any one of a certain set of trigger conditions.
-In our analysis, we require the events to be triggered by the \textsc{HLT\_Dimuon0\_Jpsi3p5\_Muon2\_v} or the \textsc{HLT\_Trimuon5\_3p5\_2\_Upsilon\_Muon\_v}, with the primary criteria of each trigger listed in Table \ref{tab:trigger}.
-The former trigger is used to extract potential $J/\psi\to\mu^+\mu^-$ processes and the latter one is used to obtain more $\Upsilon(nS)$-containing samples.
-
-\begin{table*}[ht]
-    \centering
-    \caption{Primary selection criteria of the triggers employed}
-    \begin{tabular}{p{0.45\textwidth}p{0.45\textwidth}}
-    \toprule
-    \textbf{HLT\_Dimuon0\_Jpsi3p5\_Muon2\_v}  &
-    \textbf{HLT\_Trimuon5\_3p5\_2\_Upsilon\_Muon\_v} \\
-    \midrule
-    At least 3 muons present and satisfying: &
-    At least 3 muons present and satisfying: \\
-    \begin{itemize}[topsep=0pt, leftmargin=*]
-        \item Transverse momentum $p_T > 2.0\GeVc$
-        \item Pseudorapidity $|\eta| < 2.5$
-    \end{itemize} &
-    \begin{itemize}[topsep=0pt, leftmargin=*]
-        \item Transverse momentum $p_T > 2.0\GeVc$
-        \item Pseudorapidity $|\eta| < 2.5$
-    \end{itemize}\\
-    & $\mathbf{\cdot}$ At least 1 muon satisfying $p_T > 5.0 \GeVc$ \\
-    \midrule
-    With at least one pair of muon satisfying : &
-    With at least one pair of muon satisfying : \\
-    \begin{itemize}[topsep=0pt, leftmargin=*]
-        \item $p_T > 3.5\GeVc$
-        \item Invariant mass $m_{\mu\mu}$ satisfying $2.95\GeVcs < m_{\mu\mu} < 3.25 \GeVcs$
-        \item Tracks fitted to a common vertex with probability > $0.5\%$
-    \end{itemize} &
-    \begin{itemize}[topsep=0pt, leftmargin=*]
-        \item $p_T > 3.5\GeVc$
-        \item Invariant mass $m_{\mu\mu}$ satisfying $8.5\GeVcs < m_{\mu\mu} < 11.4 \GeVcs$
-        \item Tracks fitted to a common vertex with probability > $0.5\%$
-    \end{itemize} \\
-    \bottomrule
-    \end{tabular}
-
-    \label{tab:trigger}
-\end{table*}
-
-\section{Conclusions}
-
-\subsection{Collision Data Analysis Result Summary}
-
-
-\subsection{Further Work and Future Prospects}
+\subsection{Conclusions}
 
 In the upcoming months, an event generation framework for $pp\to J/\psi+J/\psi+\phi+X$ and $pp\to J/\psi+\Upsilon+\phi+X$ processes will be developed.
 More samples will be generated to improve the statistics of the analysis.
