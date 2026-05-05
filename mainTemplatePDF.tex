@@ -40,11 +40,12 @@
 
 \newcommand*{\effXsecDPS}{\sigma_{\text{eff,DPS}}}
 \newcommand*{\effXsecTPS}{\sigma_{\text{eff,TPS}}}
+\newcommand*{\effXsecNPS}{\sigma_{\text{eff,NPS}}}
 \newcommand*{\GeV}{~\text{GeV}}
 \newcommand*{\GeVc}{~\text{GeV/c}}
 \newcommand*{\GeVcs}{~\text{GeV}\text{c}^2}
 \newcommand*{\TeV}{~\text{TeV}}
-\newcommand*{\d}{\mathrm{d}}
+% \newcommand*{\d}{\mathrm{d}}
 \newcommand*{\mb}{~\text{mb}}
 \newcommand*{\fb}{~\text{fb}}
 \newcommand*{\ifb}{~\text{fb}^{-1}}
@@ -53,16 +54,17 @@
 
 \begin{document}
 
-\title{Search for Simultaneous Production of Double $J/\psi$ and $\Upsilon$ Mesons,\\Double $J/\psi$ and $\phi$ Mesons, or $J/\psi$, $\Upsilon$ and $\phi$ Mesons in Proton-Proton\\ Collisions at $\sqrt{s} = 13.6 ~ \mathrm{TeV}$ at the CMS Experiment}
+\title{Double, Triple, and $n$-Parton Scattering Processes in High-Energy Proton-Proton Collisions}
 
-\author{Chi Wang \\
+\author{Chi Wang
 \\
-Topics on Frontiers of Cross-Sciences Course Report \\
-Zhili College, Tsinghua University, China \\
-\today
+Zhili College, Tsinghua University
+\\
+2022012259, chi-wang22@mails.tsinghua.edu.cn
 \\
 \\
-chi.w@cern.ch  \\
+14th January, 2026
+\\
 }
 
 \maketitle
@@ -70,30 +72,24 @@ chi.w@cern.ch  \\
 
 \begin{abstract}
 
-In this report, a preliminary search for simultaneous production of double $J/\psi$ and $\Upsilon$ mesons, double $J/\psi$ and $\phi$ mesons, or $J/\psi$, $\Upsilon$ and $\phi$ mesons in proton-proton collisions at $\sqrt{s} = 13.6 ~ \mathrm{TeV}$ at the CMS experiment is presented.
-The analysis is based on the data collected during the LHC Run 3 period from 2022 to 2024, with an integrated luminosity of approximately 176.6 fb$^{-1}$.
-A three-dimensional maximum likelihood fit is employed to extract the signal components.
-The results indicate a signal significance of $4.7 \sigma$ for the simultaneous production of double $J/\psi$ and $\phi$ mesons, with a yield of $130 \pm 30$ events.
-The analysis also provides insights into the effective cross-section for triple parton scattering processes.
+$n$-Parton Scattering (NPS) processes in high-energy proton-proton collisions serve as a vital tool for probing the complex internal structure of the proton. This report reviews the current theoretical frameworks and experimental status of NPS, with a primary focus on double parton scattering (DPS) and triple parton scattering (TPS). We discuss the standard "pocket formula" formalism and the effective cross-section $\sigma_{\text{eff}}$, highlighting the significant discrepancies observed in $\sigma_{\text{eff,DPS}}$ measurements between jet-based and quarkonium-based processes. The theoretical relationships between DPS and TPS effective cross-sections are examined, along with recent experimental milestones such as the observation of triple-$J/\psi$ production. Finally, we explore the potential of using data from LHC Run 3 to perform measurements in novel channels to enhance our understanding of parton dynamics inside protons.
 
 \end{abstract}
 
 
 \section{Introduction}
 
-\subsection{Multi-Parton Scattering in Proton-Proton Collisions}
-
 Proton consists of three quarks, two up-type and one down-type, and gluons, which hold together the three valence quarks, as well as of a 'sea' of virtual quark-antiquark pairs.
 These components are referred to as 'partons' and can be probed in proton-proton hard scatterings.
-In the standard picture of proton-proton collisions, typically only a few partons undergo a hard scattering with one another, with the remainders of each proton only slightly disturbed in the process.
-As the collision energy increases, the densities of gluons and sea quarks probed inside each proton grow rapidly,Thus, at higher collision energies, it becomes more likely for more than one pair of partons undergo a hard scattering in a single pp collision, leading to the simultaneous and independent production of two or more particles with transverse momentum ($p_T$) and/or mass ($m$) above a few giga-electronvolts.
-Such processes are collectively referred to as multi-parton scattering (MPS).
+In the standard picture of proton-proton collisions, typically only one pair of partons undergo a hard scattering with each another, with the remainders of each proton only slightly disturbed in the process.
+As the collision energy increases, the densities of gluons and sea quarks probed inside each proton grow rapidly. Thus, at higher collision energies, it becomes more likely for more than one pair of partons undergo a hard scattering in a single pp collision, leading to the simultaneous and independent production of two or more particles with transverse momentum ($p_T$) and/or mass ($m$) above a few giga-electronvolts.
+Such processes are collectively referred to as $n$-parton scattering (NPS).
 
-MPS processes offer an important probe into the complicated inner structure of the proton and its evolution with energy.\cite{DIEHL_MPI}\cite{BLOK_MPS} Many of these features, for example, the parton density profile in the plane transverse to the colliding beams, as well as the various correlations (in position, momentum, flavour, colour, spin and so on) between individual partons, are very difficult to calculate theoretically, since QCD behaves non-perturbatively in low-energy regions, and can only be mapped out through experimental studies of MPS in different systems and for different numbers $n$ of simultaneous scatterings \cite{MPI_LHC}.
+NPS processes offer an important probe into the complicated inner structure of the proton and its evolution with energy.\cite{DIEHL_MPI}\cite{BLOK_MPS} Many of these features, for example, the parton density profile in the plane transverse to the colliding beams, as well as the various correlations (in position, momentum, flavour, colour, spin and so on) between individual partons, are very difficult to calculate theoretically, since QCD behaves non-perturbatively in low-energy regions, and can only be mapped out through experimental studies of NPS in different systems and for different numbers $n$ of simultaneous scatterings \cite{MPI_LHC}.
 
-In addition to providing an insight into proton structure, MPS studies also contributes to background subtraction in future searches for rare standard model and beyond-standard model resonances, especially at future hadron colliders, where the MPS contribution to the backgound becomes more significant due to higher centre-of-mass energy.\cite{DdE_TPS}\cite{YJZ_TRI_JPSI}
+In addition to providing an insight into proton structure, NPS studies also contributes to background subtraction in future searches for rare standard model and beyond-standard model resonances, especially at future hadron colliders, where the NPS contribution to the backgound becomes more significant due to higher centre-of-mass energy.\cite{DdE_TPS}\cite{YJZ_TRI_JPSI}
 
-\subsection{The "Pocket Formula" and \texorpdfstring{$\sigma_{\text{eff,NPS}}$}{TPS Effective Cross-Section}}
+\section{\texorpdfstring{Theoretical Framework of $n$-Parton Scattering}{Theoretical Framework of n-Parton Scattering}}
 
 In a generic hadronic collision, the inclusive cross section for $n$ independent hard parton scatterings can be written as a convolution of generalized $n$-parton distribution functions (PDF) and elementary partonic cross sections summed over all involved partons:
 \begin{equation}
@@ -101,28 +97,42 @@ In a generic hadronic collision, the inclusive cross section for $n$ independent
     \begin{aligned}
         &
             \sigma_{hh'\to a_1\dots a_n}^{\text{NPS}} 
-        \notag \\
+        \\
         =
         &
-            \left(\frac{m}{n!}\right) \sum_{i_1,\dots,i_n,i'_1,\dots,i'_n} \int \d x_1 \cdots \d x_n \d x'_1 \cdots \d x'_n \d^2 \mathbf{b_1} \cdots \d^2 \mathbf{b_n} \d^2 \mathbf{b}
-        \notag \\
+            \left(\frac{m}{n!}\right) \sum_{i_1,\dots,i_n,i'_1,\dots,i'_n} \int \mathrm{d} x_1 \cdots \mathrm{d} x_n \mathrm{d} x'_1 \cdots \mathrm{d} x'_n
+        \\
+        &
+            \times \mathrm{d}^2 \mathbf{b_1} \cdots \mathrm{d}^2 \mathbf{b_n} \mathrm{d}^2 \mathbf{b}
+        \\
         &
             \times \Gamma_h^{i_1\dots i_n}(x_1,\dots,x_n;\mathbf{b_1},\dots,\mathbf{b_n};Q_1^2,\dots,Q_n^2)
-        \notag \\
+         \\
         &
-            \times \hat{\sigma_{a_1}^{i_1 i'_1}(x_1,x'_1,Q_1^2) \cdots \hat{\sigma}_{a_n}^{i_n i'_n}(x_n,x'_n,Q_n^2)}
-        \notag \\
+            \times \hat{\sigma_{a_1}^{i_1 i'_1}(x_1,x'_1,Q_1^2)}\cdots \hat{\sigma}_{a_n}^{i_n i'_n}(x_n,x'_n,Q_n^2)
+        \\
         &
             \times \Gamma_{h'}^{i'_1\dots i'_n}(x'_1,\dots,x'_n;\mathbf{b_1}-\mathbf{b},\dots,\mathbf{b_n}-\mathbf{b};Q_1^2,\dots,Q_n^2)
     \end{aligned}
 \end{equation}
 
+Here, $\Gamma_h^{i_1\dots i_n}(x_1,\dots,x_n;\mathbf{b_1},\dots,\mathbf{b_n};Q_1^2,\dots,Q_n^2)$ are $n$-parton generalized distribution functions, dependent on the momentum fractions $x_1, \dots, x_n$, and energy scales $Q_1,\dots,Q_n$, at transverse positions $\mathbf{b_1}, \dots, \mathbf{b_n}$ of the partons, producing final-state particles $a_1, \dots, a_n$ with each subprocess cross section being $\hat{\sigma}_{a_1}^{i_1i'_1}, \dots, \hat{\sigma}_{a_n}^{i_ni'_n}$, respectively.
+The combinatorial factor $\mathfrak{m}/n!$ accounts for the indistinguishability of the final-state particles, when identical particles are produced.
+
+The $n$-parton distribution function $\Gamma_h^{i_1\dots i_n}$ encodes, in principle, all the 3D parton structure of the hadron of relevance to compute the NPS cross-sections, describing the parton densities in the transverse plane and/or any parton correlations in kinematical and/or quantum-number spaces.
+Yet, the non-perturbative behaviour of QCD and the many-body nature of the system complicate the direct derivation of the function, and subsequently the NPS cross-sections.
+
+A common approach is assuming that the individual sub-scatterings are independent, one may therefore consider the probability for the multiple production of particles with a high transverse momentum proportional to the product of the probabilities for each individual sub-scattering.
+This assumption enables a more economical and phenomenologically viable framework to estimate the NPS cross-sections from individual single-parton scattering (SPS) processes, as is expressed in the following "pocket formula",
 \begin{equation}
 \begin{aligned}
     \label{eqn:nps_pocket}
     \sigma_{hh'\to a_1\dots a_n}^{\text{NPS}}
+    =
+    \frac{\mathfrak{m}}{n!} \frac{\sigma_{hh'\to a_1}^{\text{SPS}}\cdots \sigma_{hh'\to a_n}^{\text{SPS}}}{\effXsecNPS^{n-1}}
 \end{aligned}
 \end{equation}
+where the the effective cross-section $\sigma_{\text{eff,NPS}}$ serves as a normalization factor to ensure a proper unit of the final result, also encapsulating the parton density information.
 
 Theoretical calculation for $\effXsecNPS$ values are conducted based on \ref{eqn:nps_general}, with following approximations:
 \begin{itemize}
@@ -132,7 +142,7 @@ Theoretical calculation for $\effXsecNPS$ values are conducted based on \ref{eqn
         \begin{aligned}
             &
             \Gamma_h^{i_1\dots i_n}(x_1,\dots,x_n;\mathbf{b_1},\dots,\mathbf{b_n};Q_1^2,\dots,Q_n^2)
-            \notag \\
+             \\
             =
             & D_h^{i_1\dots i_n}(x_1,\dots,x_n;Q_1^2,\dots,Q_n^2) f(\mathbf{b_1})\cdots f(\mathbf{b_n})
         \end{aligned}
@@ -141,7 +151,14 @@ Theoretical calculation for $\effXsecNPS$ values are conducted based on \ref{eqn
     \item The longitudinal components of the generalized parton distribution functions are further factorizable into the product of single-parton distribution functions, i.e.,
     \begin{equation}
         \label{eqn:parton_longitudinal_factorization}
-        D_h^{i_1\dots i_n}(x_1,\dots,x_n;Q_1^2,\dots,Q_n^2) = D_h^{i_1}(x_1;Q_1^2)\cdots D_h^{i_n}(x_n;Q_n^2).
+        \begin{aligned}
+            &
+            D_h^{i_1\dots i_n}(x_1,\dots,x_n;Q_1^2,\dots,Q_n^2)
+            \\
+            =
+            &
+            D_h^{i_1}(x_1;Q_1^2)\cdots D_h^{i_n}(x_n;Q_n^2).
+        \end{aligned}
     \end{equation}
 \end{itemize}
 
@@ -158,22 +175,22 @@ with the fixed normalization condition $\int d^2\mathbf{b} T(\mathbf{b}) = 1$. T
 
 \section{Double Parton Scattering}
 
-Double parton scattering (DPS) processes are the most trivial MPS processes and the first observed.
+Double parton scattering (DPS) processes are the most trivial NPS processes and the first observed.
 In DPS processes, the "pocket formula" can be more explicitly written with the expression below:
 \begin{equation}
 \begin{aligned}
     \label{eqn:dps_pocket}
-    \sigma^{pp\to\psi_1+\psi_2+X}_{\text{DPS}}=
-    \left(\frac {\mathfrak{m}}{2!}\right) \frac{\sigma_{\text{SPS}}^{pp\to \psi_1+X}\sigma_{\text{SPS}}^{pp\to \psi_2+X}}{\effXsecDPS}
+    \sigma_{hh'\to a_1 a_2}^{\text{DPS}} =
+    & \left(\frac{\mathfrak{m}}{2}\right) \frac{\sigma_{hh'\to a_1}^{\text{SPS}}\sigma_{hh'\to a_2}^{\text{SPS}}}{\effXsecDPS}
 \end{aligned}
 \end{equation}
 with the effective cross-section expressed in terms of the hadron-hadron overlap function $T(\mathbf{b})$ as:
 \begin{equation}
-    \effXsecDPS = \Bigl\{\int d^2\mathbf{b} T^2(\mathbf{b})\Bigr\}^{-1}
+    \effXsecDPS = \Bigl\{\int \mathrm{d}^2\mathbf{b} T^2(\mathbf{b})\Bigr\}^{-1}
 \end{equation}
 
 From the transverse parton density functions adopted by event generators like \textsc{Pythia 8} and \textsc{Herwig++}, it is expected that the $\sigma_\text{eff,DPS}$ would fall in the range of $20 \sim 30~\mathrm{mb}$ and would not depend on the final state studies.
-However, as summarized in Figure \ref{fig:sigma-eff-dps-summary}, $\sigma_\text{eff,DPS}$ results obtained from experiments have been much lower, with $\sigma_\text{eff,DPS}\approx 10\sim 20~\text{mb}$ from final states containing jets and/or electroweak bosons\cite{ATLAS_4JET_7TEV}\cite{ATLAS_WJetJet_7TEV}\cite{ATLAS_Z_JPSI}\cite{CDF_4JET}\cite{CMS_4JET_13TEV}\cite{CMS_WJETJET_7TEV}\cite{CMS_WW_DPS_8TEV_LIM}\cite{CMS_WW_DPS_13TEV_FOUND}, and even lower values of $\sigma_\text{eff,DPS}\approx 3\sim 10~\text{mb}$ extracted from processes where two heavy quarkonia like $J/\psi$ and $\Upsilon$ are produced\cite{ATLAS_JPSIJPSI_8TEV}\cite{ATLAS_JPSI_PSI2S_7_8_TEV_COMBINED}\cite{CMS_INCL_JPSIJPSI_7TEV}\cite{ CMS_JPSIPSI2S_7TEV}\cite{CMS_JPSIPSI2S_DIFF_7TEV}\cite{CMS_YY_8TEV}\cite{CMS_YY_XSEC}.
+However, as summarized in Figure \ref{fig:sigma-eff-dps-summary}, $\sigma_\text{eff,DPS}$ results obtained from experiments have been much lower, with $\sigma_\text{eff,DPS}\approx 10\sim 20~\text{mb}$ from final states containing jets and/or electroweak bosons\cite{ATLASFourJets7TeV2016}\cite{ATLASW2Jets7TeV2013}\cite{ATLASSameSignWW13TeV2025}\cite{CMSSameSignWW8TeV2018}\cite{CMSSameSignWW13TeV2023}\cite{D0DiGamma2Jets1p96TeV2016}\cite{D0Gamma3Jets1p96TeV2010}\cite{D0Gamma3JetsAndGammaBCJet2Jets1p96TeV2014}, and even lower values of $\sigma_\text{eff,DPS}\approx 3\sim 10~\text{mb}$ extracted from processes where two heavy quarkonia like $J/\psi$ and $\Upsilon$ are produced\cite{ATLASPromptJpsiJpsi8TeV2017}\cite{CMSY1SY1S8TeV2017}\cite{CMSPromptJpsiJpsi7TeV2014}\cite{CMSY1SY1S13TeV2020}\cite{D0JpsiJpsi1p96TeV2014}\cite{D0JpsiUpsilon1p96TeV2016}\cite{LHCbJpsiJpsi13TeV2017}\cite{LHCbJpsiJpsi13TeV2024}\cite{LHCbJpsiJpsi7TeV2012}\cite{LHCbJpsiPsi2S13TeV2024}.
 
 \begin{figure}[!htbp]
     \centering
@@ -183,27 +200,13 @@ However, as summarized in Figure \ref{fig:sigma-eff-dps-summary}, $\sigma_\text{
 \end{figure}
 
 Disagreement in $\effXsecDPS$ obtained in different methods has been interpreted as from the difference in the dominant parton species probed through such processes \cite{MPI_LHC}, yet in some cases it could also be explained by inadequate SPS component subtraction.
-Such results calls for independent probes into the proton structure, for instance, triple parton scattering (TPS) processes.
+Proposals such as measuring associated production of low-$p_T$ $Z$ boson with two jets, or studying the same-sign W boson pair productions have been put forward to improve the purity of DPS event extraction.\cite{andersenExploringHighPurityMultiparton2024}\cite{kuleszaLikesignBosonProduction2000}
+Beyond the DPS processes, triple parton scattering (TPS) processes offer another avenue for exploring the proton structure.
 
-Experimental observation of DPS processes in various final states have been achieved across multiple detectors at collision energies ranging from $63\GeV$ to $13\TeV$, with $\effXsecDPS$ results presented as shown in figure \ref{fig:sigma_eff_dps_summary}.
-
-An overview of such observations is presented below, categorized by final state.
-
-\subsubsection{4-Jet Final State}
-
-% The first observation of DPS processes is reported in the 4-jet final state in 1987, by the Axial Field Spectrometer experiment at the Intersecting Storage Ring (ISR) at CERN, in $pp$ collisions at $\sqrt{s}=63\GeV$.\cite{AFSFourJets63GeV1987} The result suggests an effective cross-section of $\effXsecDPS \sim 5 \mb$.\cite{CDFFourJets1p8TeV1993}
-
-% The UA2 experiment carried on to study multi-jet events containing 4,5, or 6 jets in one $p\bar{p}$ collision at the CERN $p\bar{p}$ collider at the collision energy of $\sqrt{s}=630\GeV$. \cite{UA2MultiJet630GeV1991}
-% In this study, a lower limit of $\effXsecDPS > 8.3 \mb$ with $95\%$ confidence level was set for the effective cross-section.
-
-% At the higher energy of $\sqrt{s}=1.8\TeV$, in $p\bar{p}$ collisions at the Tevatron, the CDF collaboration reported a measurement of $\effXsecDPS = 12.1^{+10.7}_{-5.4} \mb$ in the 4-jet final state.\cite{CDFFourJets1p8TeV1993}
-
-% At the LHC, measurements on the 4-jet final state have been reported by both the ATLAS and CMS collaborations. The ATLAS collaboration measured an effective cross-section of $\effXsecDPS = 14.9^{+1.2}_{-1.0}(\text{stat.})^{+5.1}_{-3.8}(\text{syst.}) \mb$ at $\sqrt{s}=7\TeV$, employing neural networks (NN) for DPS event identification.\cite{ATLASFourJets7TeV2016}The CMS collaboration results at $\sqrt{s}=13\TeV$ were less deterministic, with significant dependence on the SPS model, ranging from $\sim 7 \mb$ using NLO $2\to 2$ matrix elements to $\sim 12 \mb$ using LO $2\to 2$ matrix elements.
-
-\subsection{Triple Parton Scattering}
+\section{Triple Parton Scattering}
 
 TPS processes in high-energy proton-proton collisions have drawn much attention both in theory and experiments.
-In a theoretical work by D. d'Enterria and A. M. Snigirev \cite{DdE_TPS}, it was derived across numerous transverse parton density distributions that, for a DPS processes and a TPS process with similar final states, the effective cross-sections $\effXsecDPS, \effXsecTPS$ satisfy the following relationship:
+In a theoretical work by D. d'Enterria and A. M. Snigirev \cite{DdE_TPS}, it was derived from numerous transverse parton density distributions that, for a DPS processes and a TPS process with similar final states, the effective cross-sections $\effXsecDPS, \effXsecTPS$ satisfy the following relationship:
 
 \begin{equation}
     \label{eqn:dps_tps_eff_xsec}
@@ -214,26 +217,13 @@ A more specific study on TPS processes was conducted by H.-S.
 Shao and Y.-J. Zhang in 2019\cite{YJZ_TRI_JPSI}, in which they demonstrated the feasibility of using existing data to observe triple-$J/\psi$ hadroproduction and, using this process, to probe into TPS processes.
 A further work by Y.-J. Zhang demonstrated the feasibility of observing simultaneous production of $J/\psi$, $\Upsilon$ and a $\phi$ meson with $p_T > 2\GeVc$ in high-energy proton-proton collisions\cite{YJZ_MPS_REPORT}.
 
-The triple-$J/\psi$ production in proton-proton collision was soon observed at the CMS experiment, with a DPS effective cross-section of $\effXsecDPS = 2.7^{+1.4}_{-1.0}(\text{exp})^{+1.5}_{-1.0}(\text{theo}) ~\text{mb}$, compatible with previous $\effXsecDPS$ results from di-quarkonia processes.
+The triple-$J/\psi$ production in proton-proton collision was soon observed at the CMS experiment, with a DPS effective cross-section of $\effXsecDPS = 2.7^{+1.4}_{-1.0}(\text{exp})^{+1.5}_{-1.0}(\text{theo}) ~\text{mb}$, compatible with previous $\effXsecDPS$ results from di-quarkonia processes.\cite{CMS_TRI_JPSI}
 
+\section{Conclusions}
 
-Following the pioneering studies in TPS at the CMS experiment, we are motivated to search for simultaneous production of double $J/\psi$ and $\Upsilon$ mesons, double $J/\psi$ and $\phi$ mesons, or $J/\psi$, $\Upsilon$ and $\phi$ mesons in proton-proton collisions at $\sqrt{s} = 13.6 ~ \mathrm{TeV}$ at the CMS experiment.
-These quarkonia final states have relatively higher cross-sections when compared to jets and electroweak bosons, bringing a larger data sample.
-It is worth mentioning that, despite a potentially lower yield, the $pp\to J/\psi+J/\psi+\Upsilon+X$ process is included in this analysis, since this process with a 6$\mu$ final state can be more cleanly reconstructed on the CMS detector than the rest of the processes, thanks to the excellent muon identification and measurement capability of the CMS detector.
-A general introduction is given in the next section.
+$n$-parton scattering processes provide a unique window into the internal structure of the proton, allowing us to probe correlations between partons that are not accessible through direct theoretical calculations. While double parton scattering (DPS) has been extensively studied, discrepancies in the extracted effective cross-section $\effXsecDPS$ across different final states suggest a need for more comprehensive measurements and refined theoretical frameworks.
 
-\subsection{Conclusions}
-
-An analysis framework has developed for extracting $pp \to J/\psi+J/\psi+\phi+X$, $pp \to J/\psi+J/\psi+\Upsilon+X$ and $pp \to J/\psi+J/\psi+\Upsilon+X$ processes from the Run 3 data of the CMS experiment.
-Evidence has been found for $pp \to J/\psi+J/\psi+\phi+X$ process with a signal significance of $4.7\sigma$ and $pp \to J/\psi+\Upsilon+\phi+X$ process with a signal significance of $2.98\sigma$.
-No clear evidence for $pp \to J/\psi+J/\psi+\Upsilon+X$ process has been found, which is believed as an result of a relatively low cross-section.
-
-\subsection{Monte Carlo Simulation Result Summary}
-
-A full-chain simulation and reconstruction framework has been developed for the $pp \to J/\psi+J/\psi+\Upsilon(1S)+X$ process.
-The feasibility of separating the TPS and DPS components has been demonstrated at the LHE level, with a clear difference in $\Delta \phi$, $\Delta R$, and $\Delta y - \Delta \phi$ correlation plots.
-The full-chain simulation results show a similar trend, but with some anomalies in the $\Delta y$ distribution that require further investigation.
-
+Triple parton scattering (TPS) represents the next frontier in this field, offering a complementary approach to understanding the proton structure. Extending TPS studies, particularly through final states including $J/\psi$, $\Upsilon$, or $\phi$ mesons, will provide critical insights into the underlying parton dynamics. Data taken from LHC Run 3, with unprecedented energy of $\sqrt{s} = 13.6\TeV$ and integrated luminosity, will offer new opportunities to unfold the complexities of parton dynamics within the proton.
 
 \bibliographystyle{unsrt}
 \bibliography{mainTemplatePDF.bib}
